@@ -24,30 +24,30 @@ block content
                             svg
                               use(xlink:href='img/icons.svg#icon-credit-card')
                             | Billing
-            - if(user.role==='admin')
-                .admin-nav
-                        h5.admin-nav__heading Admin
-                        ul.side-nav
-                            li
-                                a(href='#')
-                                    svg
-                                        use(xlink:href='img/icons.svg#icon-map')
-                                    | Manage tours
-                            li
-                                a(href='#')
-                                    svg
-                                        use(xlink:href='img/icons.svg#icon-users')
-                                    | Manage users
-                            li
-                                a(href='#')
-                                    svg
-                                        use(xlink:href='img/icons.svg#icon-star')
-                                    | Manage reviews
-                            li
-                                a(href='#')
-                                    svg
-                                        use(xlink:href='img/icons.svg#icon-briefcase')
-                                    | Manage Booking
+                - if(user.role==='admin')
+                    .admin-nav
+                            h5.admin-nav__heading Admin
+                            ul.side-nav
+                                li
+                                    a(href='#')
+                                        svg
+                                            use(xlink:href='img/icons.svg#icon-map')
+                                        | Manage tours
+                                li
+                                    a(href='#')
+                                        svg
+                                            use(xlink:href='img/icons.svg#icon-users')
+                                        | Manage users
+                                li
+                                    a(href='#')
+                                        svg
+                                            use(xlink:href='img/icons.svg#icon-star')
+                                        | Manage reviews
+                                li
+                                    a(href='#')
+                                        svg
+                                            use(xlink:href='img/icons.svg#icon-briefcase')
+                                        | Manage Booking
 
             .user-view__content
                     .user-view__form-container

@@ -1,9 +1,6 @@
 /* eslint-disable */
 const maps=document.querySelector('map')
-if(maps){
-    console.log('heyy')
     const locations=JSON.parse(document.getElementById('map').dataset.locations);
-    console.log(locations)
 
     mapboxgl.accessToken = 'pk.eyJ1IjoiYW51cmFnNDczIiwiYSI6ImNscm0zbjVqZjBxOWcya3FlN3Vua3oycHEifQ.xeAU1KNT6f_eiD62UxdY6g';
     var map = new mapboxgl.Map({
@@ -37,4 +34,4 @@ if(maps){
             right:100
         }
 })
-}
+

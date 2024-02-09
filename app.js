@@ -60,6 +60,7 @@ const scriptSrcUrls = [
           'default-src': ['\'unsafe-inline\'', '\'self\'', 'https://*', 'http://*', '\'unsafe-eval\'', '*'],
           'script-src': ['\'self\'', '\'unsafe-inline\'', '\'unsafe-eval\'', '*', 'http', 'https'],
           'img-src': ['\'self\'', 'http://*', 'https://*', 'https://www.natours.com'],
+          'worker-src':['\'self\'','blob:']
       },
   })
   );
