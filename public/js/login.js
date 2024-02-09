@@ -13,7 +13,7 @@ const login=async(email,password)=>{
     try{
         const res=await axios({
             method:'POST',
-            url:'http://127.0.0.1:3000/api/v1/users/login',
+            url:'/api/v1/users/login',
             data:{
                 email,
                 password
@@ -33,7 +33,7 @@ const logout=async(email,password)=>{
     try{
         const res=await axios({
             method:'GET',
-            url:'http://127.0.0.1:3000/api/v1/users/logout'
+            url:'/api/v1/users/logout'
         })
         if(res.data.status==='success'){
             showAlert('success','Logged Out Successful')
@@ -58,7 +58,7 @@ if(loginout){
     loginout.addEventListener('click',logout)
 }
 const updateMe=async(data,type)=>{
-    const url= type==='data'?'http://127.0.0.1:3000/api/v1/users/updateMe':'http://127.0.0.1:3000/api/v1/users/updateMyPassword'
+    const url= type==='data'?'/api/v1/users/updateMe':'/api/v1/users/updateMyPassword'
     try{
         const res=await axios({
             method:'PATCH',
@@ -101,7 +101,7 @@ const bookBtn=document.getElementById('book-tour');
 const stripe=Stripe('pk_test_51Oh53MSEBMa2qACOYg47RyDkNM7VdkaPs3LsV637FeriPsqCTNyEcHzmUdiGhOofrDvU1E19MmeuyMzUWibey7Z500oN7GRMD4')
 const booktour=async tourId=>{
     try{
-        const session=await axios(`http://127.0.0.1:3000/api/v1/booking/checkout-session/${tourId}`)
+        const session=await axios(`/api/v1/booking/checkout-session/${tourId}`)
         await stripe.redirectToCheckout({
             sessionId:session.data.session.id
         })
